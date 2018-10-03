@@ -15,6 +15,7 @@
   },
   "scripts": {
     "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "lint": "eslint .",
     "test": "mocha --reporter=dot",
     "test:ci": "yarn run lint && yarn run test:coverage && yarn run coverage",
     "test:coverage": "nyc yarn run test"
@@ -26,6 +27,7 @@
     "@articulate/spy": "^0.0.1",
     "chai": "^4.2.0",
     "coveralls": "^3.0.2",
+    "eslint": "^5.6.1",
     "mocha": "^5.2.0",
     "nyc": "^13.0.1",
     "prop-factory": "^1.0.0"
