@@ -1,5 +1,6 @@
 const { curry, partial } = require('ramda')
 
+// instrument :: NewRelic -> (Action -> Promise Action) -> Action -> Promise Action
 const instrument = (newrelic, handler) => {
   const start = newrelic.startWebTransaction.bind(newrelic)
 
